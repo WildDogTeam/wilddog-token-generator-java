@@ -3,3 +3,4 @@ target/
 .classpath
 .project
 wilddog-token-generator.iml
+.idea

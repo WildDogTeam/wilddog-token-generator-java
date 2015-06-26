@@ -35,29 +35,20 @@
         <url>https://github.com/WildDogTeam/wilddog-token-generator-java</url>
     </scm>
 	
-	<!--<distributionManagement>-->
-		<!--<repository>-->
-			<!--<id>nexus-releases</id>-->
-			<!--<name>Nexus Release Repository</name>-->
-			<!--<url>http://nexus.wilddog.cn/nexus/content/repositories/releases/</url>-->
-		<!--</repository>-->
-		<!--<snapshotRepository>-->
-			<!--<id>nexus-snapshots</id>-->
-			<!--<name>Nexus Snapshot Repository</name>-->
-			<!--<url>http://nexus.wilddog.cn/nexus/content/repositories/snapshots/</url>-->
-		<!--</snapshotRepository>-->
-	<!--</distributionManagement>-->
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://nexus.wilddog.cn/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://nexus.wilddog.cn/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>oss</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+
 
 	<dependencies>
 		<dependency>
@@ -80,6 +71,42 @@
 		</dependency>
 		
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>oss</id>
+			<distributionManagement>
+				<snapshotRepository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+				</snapshotRepository>
+				<repository>
+					<id>oss</id>
+					<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+				</repository>
+			</distributionManagement>
+
+            <build>
+                <plugins>
+                    <!-- GPG -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.5</version>
+                        <executions>
+                            <execution>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+		</profile>
+
+	</profiles>
 	
 	<build>
 		<resources>
@@ -136,20 +163,6 @@
                         <phase>package</phase>
                         <goals>
                             <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- GPG -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.5</version>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>

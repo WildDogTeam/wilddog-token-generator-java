@@ -17,6 +17,7 @@ WildDog Token用来对终端用户的身份进行校验，控制存储在WildDog
 </dependency>
 ```
 
+<br>
 
 如果你没有使用Mave构建你的项目，你也可以从Maven仓库下载  http://search.maven.org/#search%7Cga%7C1%7Cwilddog-token-generator
 

@@ -1,3 +1,11 @@
+WildDog Token Generator
+
+
+当你想将野狗与已有的用户账号系统集成时，可以使用Token生成器来生成WildDog Token。
+每位终端用户使用野狗的服务均要拥有WildDog Token。
+
+WildDog Token用来对终端用户的身份进行校验，控制存储在WildDog端的数据读写权限，进而保证数据安全。
+
 
 你可以将以下库添加到pom.xml中:
 

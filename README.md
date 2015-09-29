@@ -1,14 +1,16 @@
 
-You can get the library by including the following in your project's pom.xml:
+你可以将以下库添加到pom.xml中:
 
+```xml
 <dependency>
-    <groupId>com.mixpanel</groupId>
-    <artifactId>mixpanel-java</artifactId>
-    <version>1.4.2</version>
+    <groupId>com.wilddog</groupId>
+    <artifactId>wilddog-token-generator</artifactId>
+    <version>1.0.0</version>
 </dependency>
-If you're not using Maven to build your project, you can browse and download the library jar directly from Maven central at http://search.maven.org/#search|ga|1|mixpanel-java
+```
 
-可以搜索mave  http://search.maven.org/#search%7Cga%7C1%7Cwilddog-token-generator
+
+如果你没有使用Mave构建你的项目，你也可以从Maven仓库下载  http://search.maven.org/#search%7Cga%7C1%7Cwilddog-token-generator
 
 
 示例代码：

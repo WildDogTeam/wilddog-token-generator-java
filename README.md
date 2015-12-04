@@ -11,9 +11,9 @@ WildDog Token用来对终端用户的身份进行校验，控制存储在WildDog
 
 ```xml
 <dependency>
-    <groupId>com.wilddog</groupId>
-    <artifactId>wilddog-token-generator</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.wilddog</groupId>
+    <artifactId>wilddog-token-generator</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 

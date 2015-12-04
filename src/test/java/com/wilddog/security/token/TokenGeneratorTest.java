@@ -30,7 +30,7 @@ public class TokenGeneratorTest {
         Map<String, Object> authPayload = new HashMap<String, Object>();
         authPayload.put("uid", "-Je9A7op-mEPuhrDPN9T");
         authPayload.put("id", "-Je9A7op-mEPuhrDPN9T");
-        authPayload.put("firebase", "tquest");
+        authPayload.put("wilddog", "tquest");
 
         TokenGenerator tokenGenerator = new TokenGenerator("OPeJAbqF07aWFw5SXvV7sUZnT3SbHVxzeZwqvJHV");
         String token = tokenGenerator.createToken(authPayload);

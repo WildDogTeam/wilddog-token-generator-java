@@ -1,5 +1,6 @@
 # WildDog Token Generator
 
+# deprecated 新版Auth 请参考： https://docs.wilddog.com/auth/Server/server.html
 
 当你想将野狗与已有的用户账号系统集成时，可以使用 Token 生成器来生成WildDog Token。
 每位终端用户使用野狗的服务均要拥有WildDog Token。
